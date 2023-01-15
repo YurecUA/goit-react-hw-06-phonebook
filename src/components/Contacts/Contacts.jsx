@@ -4,7 +4,7 @@ import { IconContext } from 'react-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
-import s from './Contacts.module.css';
+import styles from './Contacts.module.css';
 import actions from '../../redux/contacts/contacts-action';
 import { filteredContacts } from '../../redux/contacts/contacts-selectors';
 
@@ -24,20 +24,20 @@ const Contacts = () => {
   const contacts = useSelector(filteredContacts);
 
   const listClasses = classNames({
-    [s.list]: true,
+    [styles.list]: true,
     'list-border': contacts.length,
   });
 
   return (
     <div className={listClasses}>
-      <ul className={s.list__ul}>
+      <ul className={styles.list__ul}>
         {contacts.map(person => (
           <motion.li
             initial="hidden"
             animate="visible"
             variants={variants}
             key={person.id}
-            className={s.search__contact}
+            className={styles.search__contact}
           >
             <IconContext.Provider
               value={{
@@ -50,10 +50,10 @@ const Contacts = () => {
                 onClick={() => dispatch(actions.deleteContact(person.id))}
               />
             </IconContext.Provider>
-            <p className={s.search__text}>
+            <p className={styles.search__text}>
               {person.name} : {person.number}
             </p>
-            <div className={s.trash}>
+            <div className={styles.trash}>
               <IconContext.Provider
                 value={{
                   color: 'red',
