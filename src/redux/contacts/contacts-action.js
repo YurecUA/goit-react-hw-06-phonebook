@@ -13,6 +13,7 @@ const addContact = createAction(types.ADD_CONTACT, (name, number) => ({
 const deleteContact = createAction(types.DELETE_CONTACT);
 const addFilter = createAction(types.ADD_FILTER);
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { addContact, deleteContact, addFilter };
 // export const addContact = (id, name, phone) => ({
 //   type: types.ADD_CONTACT,
