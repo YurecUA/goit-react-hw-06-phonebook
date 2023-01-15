@@ -1,0 +1,25 @@
+.Search__box {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.search__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+  display: block;
+  margin-right: 7px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px black, 0 0 1em red;
+}
+
+.search__input {
+  display: block;
+  width: 250px;
+  height: 30px;
+  max-width: 100%;
+  /* text-align: center;  */
+}
