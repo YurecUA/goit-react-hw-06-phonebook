@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { motion } from 'framer-motion';
 import PhoneInput from 'react-phone-input-2';
 
-import s from './Form.module.css';
+import styles from './Form.module.css';
 import actions from '../../redux/contacts/contacts-action';
 import { getItems } from '../../redux/contacts/contacts-selectors';
 import 'react-phone-input-2/lib/style.css';
@@ -63,20 +63,20 @@ function Form() {
   };
 
   return (
-    <div className={s.container}>
+    <div className={styles.container}>
       <motion.form
         initial="hidden"
         animate="visible"
         variants={variants}
-        className={s.form}
+        className={styles.form}
         onSubmit={handleSubmit}
       >
         <label htmlFor={nameId.current}>
-          <p className={s.form__label}>Name</p>
+          <p className={styles.form__label}>Name</p>
           <input
             type="text"
             name="name"
-            className={s.form__firstInput}
+            className={styles.form__firstInput}
             value={name}
             onChange={handleInputChange}
             id={nameId.current}
@@ -84,8 +84,8 @@ function Form() {
             required
           />
         </label>
-        <label className={s.phoneLabel}>
-          <p className={s.form__label}>Number</p>
+        <label className={styles.phoneLabel}>
+          <p className={styles.form__label}>Number</p>
           <PhoneInput
             name="number"
             value={number}
@@ -94,14 +94,14 @@ function Form() {
             placeholder="+38068-555-55-55"
             enableSearch={true}
             disableSearchIcon={true}
-            containerClass={s.phoneContainer}
-            buttonClass={s.phoneButton}
-            inputClass={s.phoneInput}
+            containerClass={styles.phoneContainer}
+            buttonClass={styles.phoneButton}
+            inputClass={styles.phoneInput}
           />
         </label>
-        <div className={s.submit__box}>
+        <div className={styles.submit__box}>
           <button
-            className={s.form__button}
+            className={styles.form__button}
             type="submit"
             disabled={name === '' || number === ''}
           >
