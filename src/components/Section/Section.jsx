@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
-import s from './Section.module.css';
+import styles from './Section.module.css';
 
 const variants = {
   hidden: {
@@ -15,12 +15,12 @@ const variants = {
 };
 
 const Section = ({ title, children }) => (
-  <section className={s.container}>
+  <section className={styles.container}>
     <motion.h2
       initial="hidden"
       animate="visible"
       variants={variants}
-      className={s.container__title}
+      className={styles.container__title}
     >
       {title}
     </motion.h2>
