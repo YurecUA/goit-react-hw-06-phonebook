@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import actions from '../../redux/contacts/contacts-action';
-import s from './Filter.module.css';
+import styles from './Filter.module.css';
 import { getFilter } from '../../redux/contacts/contacts-selectors';
 
 const Filter = () => {
@@ -12,10 +12,10 @@ const Filter = () => {
   const onChange = e => dispatch(actions.addFilter(e.currentTarget.value));
 
   return (
-    <label htmlFor="search" className={s.Search__box}>
-      <p className={s.search__label}>Find contacts by name:</p>
+    <label htmlFor="search" className={styles.Search__box}>
+      <p className={styles.search__label}>Find contacts by name:</p>
       <input
-        className={s.search__input}
+        className={styles.search__input}
         type="search"
         name="search"
         id="search"
